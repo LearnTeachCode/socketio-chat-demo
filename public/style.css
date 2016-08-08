@@ -1,0 +1,44 @@
+body {
+  font-size: 20px;
+}
+#chat {
+  margin-bottom: 1em;  
+}
+.message {
+  padding: 0.5em;
+}
+.message:nth-child(even) {
+  background-color: #eee;
+}
+.message:last-child {
+  margin-bottom: 3.5em;
+}
+.username {
+  font-weight: bold;
+}
+
+.interface {
+  height: 3.5em;
+  position: fixed;  
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 10px 10px 5px #888888;
+}
+input, button {
+  padding: .5em;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+#nameinput {
+  width: 20%;
+}
+#messageinput {
+  width: 60%;  
+}
+#send {
+  width: 20%;  
+}
