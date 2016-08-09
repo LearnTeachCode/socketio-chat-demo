@@ -11,7 +11,7 @@ http.listen(port, function(){
 });
 
 io.on('connection', function(socket){
-		
+
 	console.log('A user connected!');
 
 	socket.on('chat', function(data){
@@ -19,8 +19,8 @@ io.on('connection', function(socket){
 	    io.emit('chat', data);
 	});
 
-	socket.on('disconnect', function(msg){	    
-	    console.log('A user disconnected.');	    
+	socket.on('disconnect', function(msg){
+	    console.log('A user disconnected.');
 	});
 
 });
