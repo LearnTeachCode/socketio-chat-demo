@@ -10,30 +10,18 @@ var messageInput = document.getElementById("messageinput");
 // When user clicks "Send" button, run sendMessage function
 sendButton.addEventListener("click", sendMessage);
 
-// If ENTER key was pressed, run sendMessage function
-window.addEventListener("keypress", function(event){
-	// Normalize key code across browsers:
-	var keyCode = event.which || event.keyCode || 0;
-	// Keycode #13 is the enter key
-	if (keyCode === 13) {
-		sendMessage();
-	}
-});
-
-// When "chat" event received, display message
-socket.on('chat', function(data){
-	console.log('RECEIVED: name: '+ data.name + ', message: ' + data.message);
-	displayNewMessage(data.name, data.message);
-});
-
-
 function sendMessage(event) {
 	console.log('SENDING: name: '+ nameInput.value + ', message: ' + messageInput.value);
-	// Send the name and message to the server in an event called "chat"
-	socket.emit('chat', {name: nameInput.value, message: messageInput.value} );
-	// After each messag is sent, delete what shows in the user's chat input box
-	messageInput.value = '';
+	
+	// Write your code here to use SocketIO to send data to the server!
+	
+	
 }
+
+// Write your code here to use SocketIO to receive data from the server,
+// and be sure to use the displayNewMessage function below to display it on the page!
+
+
 
 // This function handles actually displaying the messages:
 function displayNewMessage (username, message) {
