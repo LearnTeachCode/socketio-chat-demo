@@ -20,12 +20,7 @@ io.on('connection', function(socket){
 	// Display this message in the server console
 	console.log('A user connected!');
 
-	// When the server receives a message named "chat",
-	socket.on('chat', function(data){
-		// Display the received data in the server console
-		console.log('CHAT: name: '+ data.name + ', message: ' + data.message);
-		// Send the received data to every connected client in a message called "chat"
-		io.sockets.emit('chat', data);
-	});
+	// Write your SocketIO code here for sending and receiving events!
+	
 
 });	// End of SocketIO code
